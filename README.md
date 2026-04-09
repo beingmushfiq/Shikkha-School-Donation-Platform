@@ -98,6 +98,21 @@ npm run build
 npm start
 ```
 
+## 🚀 Deployment
+
+### Deploy to Vercel
+The easiest way to deploy Shikkha is using the [Vercel Platform](https://vercel.com/new).
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbeingmushfiq%2FShikkha-School-Donation-Platform)
+
+**Prerequisites for Vercel:**
+1.  **Environment Variables**: Ensure you add your Firebase and Gemini keys in the Vercel Project Settings.
+2.  **Output Directory**: Set to `dist`.
+3.  **Install Command**: `npm install`.
+4.  **Build Command**: `npm run build`.
+
+*Note: The hybrid Express server (`server.ts`) is designed for development and local production testing. For production serverless environments like Vercel, API endpoints should ideally be migrated to Vercel Functions.*
+
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
