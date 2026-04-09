@@ -1,7 +1,6 @@
-# Shikkha: School & Donation Platform 🎓 🤝
-
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" alt="Shikkha Banner" width="100%" />
+  <img src="public/logo.svg" alt="Shikkha Logo" width="120" />
+  <h1>Shikkha: School & Donation Platform 🎓 🤝</h1>
   <p><em>Empowering Education through Transparent Giving</em></p>
 </div>
 

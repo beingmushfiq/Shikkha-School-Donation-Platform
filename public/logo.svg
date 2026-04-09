@@ -1,0 +1,30 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Graduation Cap Base -->
+  <path d="M100 40L30 80L100 120L170 80L100 40Z" fill="url(#brandGradient)" filter="url(#shadow)" />
+  <path d="M60 95V135C60 135 75 155 100 155C125 155 140 135 140 135V95" stroke="url(#brandGradient)" stroke-width="12" stroke-linecap="round" fill="none" />
+  
+  <!-- Heart Shaping the Tassel -->
+  <path d="M170 80V130C170 130 165 145 155 145C145 145 140 135 140 130" stroke="#F59E0B" stroke-width="6" stroke-linecap="round" fill="none" />
+  <circle cx="155" cy="145" r="8" fill="#F59E0B" />
+  
+  <!-- Educational & Heart Symbology -->
+  <path d="M100 85C100 85 90 75 80 75C70 75 65 83 65 90C65 105 100 125 100 125C100 125 135 105 135 90C135 83 130 75 120 75C110 75 100 85 100 85Z" fill="white" opacity="0.9" />
+</svg>

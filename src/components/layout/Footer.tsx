@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <GraduationCap className="h-8 w-8 text-primary" />
+              <img src="/logo.svg" alt="Shikkha Logo" className="h-10 w-10 brightness-0 invert" />
               <span className="text-xl font-bold tracking-tight text-white">Shikkha</span>
             </Link>
             <p className="text-sm text-slate-400">

@@ -35,7 +35,7 @@ export const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <GraduationCap className="h-8 w-8 text-primary" />
+              <img src="/logo.svg" alt="Shikkha Logo" className="h-10 w-10" />
               <span className="text-xl font-bold tracking-tight">Shikkha</span>
             </Link>
           </div>
