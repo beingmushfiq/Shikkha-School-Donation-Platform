@@ -1,0 +1,87 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and role information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "donor"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Donation": {
+      "title": "Donation",
+      "description": "Donation record",
+      "type": "object",
+      "properties": {
+        "amount": { "type": "number" },
+        "currency": { "type": "string" },
+        "type": { "type": "string", "enum": ["one-time", "monthly"] },
+        "tier": { "type": "string" },
+        "donorId": { "type": "string" },
+        "donorName": { "type": "string" },
+        "donorEmail": { "type": "string", "format": "email" },
+        "message": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "completed", "failed"] },
+        "transactionId": { "type": "string" },
+        "method": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["amount", "type", "donorEmail", "status", "createdAt"]
+    },
+    "Student": {
+      "title": "Student",
+      "description": "Student profile for sponsorship",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "age": { "type": "number" },
+        "grade": { "type": "string" },
+        "story": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "isSponsored": { "type": "boolean" },
+        "sponsorId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "story", "imageUrl", "isSponsored"]
+    },
+    "Content": {
+      "title": "Content",
+      "description": "Blog posts and gallery items",
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["blog", "gallery"] },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "authorId": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["type", "title", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/donations/{donationId}": {
+      "schema": "Donation",
+      "description": "Donation records"
+    },
+    "/students/{studentId}": {
+      "schema": "Student",
+      "description": "Student profiles"
+    },
+    "/content/{contentId}": {
+      "schema": "Content",
+      "description": "Blog and gallery content"
+    }
+  }
+}
